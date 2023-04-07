@@ -33,9 +33,7 @@ const Form = () => {
     }));
   };
 
-  const handleServiceChange = (
-    e: React.MouseEvent<HTMLButtonElement, MouseEvent>
-  ) => {
+  const handleServiceChange = (e: any) => {
     const name = e.currentTarget.name;
     setServices({
       ...services,
