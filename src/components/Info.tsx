@@ -3,7 +3,7 @@ import { TiLocation } from "react-icons/ti";
 import { FiPhone } from "react-icons/fi";
 import { MdMailOutline } from "react-icons/md";
 
-const dummy = [
+const CompanyInfo = [
   {
     id: 1,
     type: "Our Location",
@@ -24,16 +24,16 @@ const dummy = [
   },
 ];
 
-const details = dummy.map((item) => (
-  <div key={item.id} className="flex flex-row gap-4 mb-5 items-center">
-    <div className=" w-10 h-10 rounded-full bg-gradient-to-r from-blue to-lightblue .... shadow-icon-shadow">
+const details = CompanyInfo.map((data) => (
+  <div key={data.id} className="flex flex-row gap-4 mb-8 items-center">
+    <div className=" w-11 h-11 rounded-full bg-gradient-to-r from-blue to-lightblue .... shadow-icon-shadow">
       <span className="flex justify-center items-center w-full h-full">
-        {item.icon}
+        {data.icon}
       </span>
     </div>
     <div>
-      <h3 className="text-xs font-medium">{item.type}</h3>
-      <p className="text-base font-medium text-blue leading-6">{item.value}</p>
+      <h3 className="text-xs font-medium mb-1">{data.type}</h3>
+      <p className="text-base font-medium text-blue leading-6">{data.value}</p>
     </div>
   </div>
 ));
