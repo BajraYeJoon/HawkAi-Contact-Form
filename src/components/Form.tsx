@@ -169,7 +169,7 @@ const Form = () => {
 
         <div className="flex  items-center gap-8">
           <textarea
-            className="block p-3.5 text-sm text-gray-900 bg-gray-50 rounded-lg border border-[#C6C6C6] mt-4 w-4/5 h-32"
+            className="block p-3.5 text-sm text-gray-900 bg-gray-50 rounded-lg border border-[#C6C6C6] mt-4 w-4/5 h-32 focus:outline-none"
             placeholder="Your message"
             style={{ resize: "none" }}
           ></textarea>

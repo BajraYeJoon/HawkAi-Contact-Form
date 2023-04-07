@@ -12,8 +12,8 @@ const App = () => {
         <Info />
         <Form />
         <div
-          className="absolute top-10 right-16 cursor-pointer"
-          onClick={redirectToHome}
+          className="absolute top-10 right-16 cursor-pointer hover:animate-spin-slow
+          onClick={redirectToHome}"
         >
           <img src={CloseIcon} alt="Cross Icon" />
         </div>
