@@ -7,3 +7,20 @@
     font-family: Inter, sans-serif;
   }
 }
+
+@layer components {
+  .form-input-fields {
+    @apply w-full px-[5px] py-[12px] mt-[10px] rounded focus:outline-none mb-6 text-gray font-normal box-border pl-12 text-sm;
+  }
+
+  .checked-services {
+    @apply bg-[#475BB9] rounded-[4px] border box-border items-start p-3 text-[#ffffff] text-sm border-blue;
+  }
+  .default-unchecked-services {
+    @apply bg-[white] rounded-[4px] box-border  items-start p-3 text-[#000000] text-sm;
+  }
+
+  .form-icons {
+    @apply absolute top-8 left-1 -translate-y-1/2 p-2 opacity-90;
+  }
+}

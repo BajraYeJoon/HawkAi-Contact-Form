@@ -53,7 +53,7 @@ const Form = () => {
           Your name
         </label>
         <div className="relative">
-          <i className="absolute top-8 left-1 -translate-y-1/2 p-2 opacity-90">
+          <i className="form-icons">
             <img
               src={Person}
               alt=""
@@ -67,8 +67,10 @@ const Form = () => {
             name="name"
             value={formData.name}
             onChange={handleInputChange}
-            className="w-full px-[5px] py-[12px] mt-[10px] rounded focus:outline-none mb-6 text-gray font-normal box-border pl-12 text-sm "
+            className="form-input-fields"
             placeholder="E.g. Jane Doe"
+            aria-required
+            required
           />
         </div>
 
@@ -76,18 +78,20 @@ const Form = () => {
           Email
         </label>
         <div className="relative">
-          <i className="absolute top-8 left-1 -translate-y-1/2 p-2 opacity-90">
+          <i className="form-icons">
             <img src={Mail} alt="" style={{ width: "25px", height: "18px" }} />
           </i>
 
           <input
-            type="text"
+            type="email"
             id="email"
             name="email"
             value={formData.email}
             onChange={handleInputChange}
-            className="w-full px-[5px] py-[12px] mt-[10px] rounded focus:outline-none mb-6 box-border pl-12 text-sm text-gray font-normal "
+            className="form-input-fields"
             placeholder="E.g. JaneDoe@gmail.com"
+            aria-required
+            required
           />
         </div>
 
@@ -95,7 +99,7 @@ const Form = () => {
           Phone
         </label>
         <div className="relative">
-          <i className="absolute top-8 left-1 -translate-y-1/2 p-2 opacity-90">
+          <i className="form-icons">
             <img src={Phone} alt="" style={{ width: "25px", height: "18px" }} />
           </i>
           <input
@@ -104,8 +108,10 @@ const Form = () => {
             name="phone"
             value={formData.phone}
             onChange={handleInputChange}
-            className="w-full px-[5px] py-[12px] mt-[10px] rounded focus:outline-none mb-6 text-gray font-normal box-border pl-12 text-sm"
+            className="form-input-fields"
             placeholder="E.g 9875643621"
+            aria-required
+            required
           />
         </div>
 
@@ -116,9 +122,7 @@ const Form = () => {
             type="button"
             name="uiux"
             className={
-              services.uiux
-                ? "bg-[#475BB9] rounded-[4px] border box-border items-start p-3 text-[#ffffff] text-sm border-blue"
-                : "bg-[white] rounded-[4px] box-border  items-start p-3 text-[#000000] text-sm"
+              services.uiux ? "checked-services" : "default-unchecked-services"
             }
             onClick={handleServiceChange}
           >
@@ -129,8 +133,8 @@ const Form = () => {
             name="webdev"
             className={
               services.webdev
-                ? "bg-[#475BB9] rounded-[4px] border box-border items-start p-3 text-[#ffffff] text-sm"
-                : "bg-[white] rounded-[4px] box-border items-start p-3 text-[#000000] text-sm "
+                ? "checked-services"
+                : "default-unchecked-services"
             }
             onClick={handleServiceChange}
           >
@@ -144,8 +148,8 @@ const Form = () => {
             name="digimarketing"
             className={
               services.digimarketing
-                ? "bg-[#475BB9] rounded-[4px] border box-border items-start p-3 text-[#ffffff] text-sm border-blue"
-                : "bg-[white] rounded-[4px] box-border items-start p-3 text-[#000000] text-sm"
+                ? "checked-services"
+                : "default-unchecked-services"
             }
             onClick={handleServiceChange}
           >
@@ -155,9 +159,7 @@ const Form = () => {
             type="button"
             name="seo"
             className={
-              services.seo
-                ? "bg-[#475BB9] rounded-[4px] border box-border items-start p-3 text-[#ffffff] text-sm border-blue"
-                : "bg-[white] rounded-[4px] box-border items-start p-3 text-[#000000] text-sm"
+              services.seo ? "checked-services" : "default-unchecked-services"
             }
             onClick={handleServiceChange}
           >
