@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { motion } from "framer-motion";
 
 import Person from "../assets/contactInfoIcons/people.svg";
 import Mail from "../assets/contactInfoIcons/mail.svg";
@@ -54,10 +55,21 @@ const Form = () => {
         </label>
         <div className="relative">
           <i className="form-icons">
-            <img
+            <motion.img
               src={Person}
               alt=""
               style={{ width: "25px", height: "18px" }}
+              initial={{ opacity: 0, scale: 0.5 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{
+                duration: 1,
+
+                ease: [0, 0.3, 0.3, 1.08],
+              }}
+              whileHover={{
+                rotateZ: -10,
+                scale: 1.3,
+              }}
             />
           </i>
 
@@ -79,7 +91,22 @@ const Form = () => {
         </label>
         <div className="relative">
           <i className="form-icons">
-            <img src={Mail} alt="" style={{ width: "25px", height: "18px" }} />
+            <motion.img
+              src={Mail}
+              alt=""
+              style={{ width: "25px", height: "18px" }}
+              initial={{ opacity: 0, scale: 0.5 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{
+                duration: 1,
+
+                ease: [0, 0.3, 0.3, 1.08],
+              }}
+              whileHover={{
+                rotateZ: -10,
+                scale: 1.3,
+              }}
+            />
           </i>
 
           <input
@@ -100,7 +127,22 @@ const Form = () => {
         </label>
         <div className="relative">
           <i className="form-icons">
-            <img src={Phone} alt="" style={{ width: "25px", height: "18px" }} />
+            <motion.img
+              src={Phone}
+              alt=""
+              style={{ width: "25px", height: "18px" }}
+              initial={{ opacity: 0, scale: 0.5 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{
+                duration: 1,
+
+                ease: [0, 0.3, 0.3, 1.08],
+              }}
+              whileHover={{
+                rotateZ: -10,
+                scale: 1.3,
+              }}
+            />
           </i>
           <input
             type="number"
@@ -173,12 +215,23 @@ const Form = () => {
             placeholder="Your message"
             style={{ resize: "none" }}
           ></textarea>
-          <button
+          <motion.button
             type="submit"
             className="bg-blue w-24 h-20 text-[#ffffff] rounded-full"
+            initial={{ opacity: 0, scale: 0.5 }}
+            animate={{ opacity: 1, scale: 1 }}
+            whileHover={{
+              scale: 1,
+              transition: { duration: 0.2, ease: "easeOut" },
+            }}
+            whileTap={{
+              scale: 0.5,
+              transition: { duration: 0.2 },
+            }}
+            transition={{ duration: 1, delay: 0.2, ease: [0, 0.3, 0.3, 1.08] }}
           >
             Submit
-          </button>
+          </motion.button>
         </div>
       </form>
     </div>

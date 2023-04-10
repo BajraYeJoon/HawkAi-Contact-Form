@@ -4,7 +4,13 @@
 
 @layer base {
   html {
-    font-family: Inter, sans-serif;
+    font-family: Sf Pro Display;
+  }
+
+  @font-face {
+    font-family: "Sf Pro Display";
+    font-weight: 400;
+    src: url("/fonts/SF-Pro-Display-Regular.ttf") format("ttf");
   }
 }
 

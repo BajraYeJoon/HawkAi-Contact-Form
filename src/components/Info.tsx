@@ -32,7 +32,7 @@ const details = CompanyInfo.map((data) => (
       </span>
     </div>
     <div>
-      <h3 className="text-xs font-medium mb-1">{data.type}</h3>
+      <h3 className="text-xs font-medium mb-1 font-sans">{data.type}</h3>
       <p className="text-base font-medium text-blue leading-6">{data.value}</p>
     </div>
   </div>

@@ -8,6 +8,10 @@ export default {
       lightblue: "#218CFF",
     },
 
+    fontFamily: {
+      sans: "Sf Pro Display",
+    },
+
     extend: {
       boxShadow: {
         "icon-shadow":
